@@ -3,7 +3,7 @@ import express from "express";
 const app = express();
 
 app.get("/api/students", (_req, res) => {
-  console.log("HOLIS, SOY LA API FUNCIONANDO💡");
+  console.log("API INTERNA FUNCIONANDO 🚀");
   res.status(200).json({
     students: ["a", "b", "c"],
   });
