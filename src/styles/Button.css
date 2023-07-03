@@ -1,0 +1,9 @@
+.alias{
+  padding: 2rem;
+  background-color: antiquewhite;
+  color: purple;
+}
+
+.alias:hover{
+  background-color: chartreuse;
+}
