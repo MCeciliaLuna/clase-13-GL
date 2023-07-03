@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
+import Button from '../src/components/Button.jsx'
 
 function App() {
   useEffect(() => {
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <h1>Testeando</h1>
+      <Button />
     </>
   );
 }

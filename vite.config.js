@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import api from "./src/api/index"; //importo la API a la configuración general de VITE
 import react from "@vitejs/plugin-react-swc";
+//1:55
 
 export default defineConfig({
   plugins: [react()],
@@ -16,4 +17,9 @@ export default defineConfig({
       },
     },
   },
+  resolve:{
+    alias: { //configurar alias para importaciones más fáciles/legibles
+      '@styles': './src/styles' //evitamos poner "./././" y sólo busca el @ con el nombre de la carpeta
+    }
+  }
 });
