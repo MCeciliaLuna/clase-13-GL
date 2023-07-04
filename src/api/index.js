@@ -11,7 +11,6 @@ app.get("/api/users/:index", (req, res) => {
   setTimeout(() => {
     res.status(200).json(_mock(index));
   }, 2300);
-
   console.log("API INTERNA FUNCIONANDO 🚀");
   console.log(_mock(index));
 });

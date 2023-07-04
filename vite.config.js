@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import api from "./src/api/index"; //importo la API a la configuración general de VITE
 import react from "@vitejs/plugin-react-swc";
-//1:55
+import { fileURLToPath, URL } from "node:url"; //funciona mejor que el '././' en la declaración del alias (línea 22)
 
 export default defineConfig({
   plugins: [react()],
@@ -19,7 +19,7 @@ export default defineConfig({
   },
   resolve:{
     alias: { //configurar alias para importaciones más fáciles/legibles
-      '@styles': './src/styles' //evitamos poner "./././" y sólo busca el @ con el nombre de la carpeta
+      '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)) //evitamos poner "./././" y sólo busca el @ con el nombre de la carpeta
     }
   }
 });
